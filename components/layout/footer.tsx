@@ -44,7 +44,7 @@ export function Footer() {
     <footer className="bg-gradient-to-b from-blue-900 to-blue-950 text-white">
       {/* Newsletter Section */}
       <div className="border-b border-white/10">
-        <div className="container-custom py-12">
+        <div className="container-custom py-16 md:py-20">
           <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
             <div>
               <h3 className="text-2xl font-bold mb-2">
@@ -180,7 +180,7 @@ export function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-white/10">
-        <div className="container-custom py-6">
+        <div className="container-custom py-8 md:py-10">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-blue-400 text-sm">
               &copy; {new Date().getFullYear()} Creativism. All rights reserved.
