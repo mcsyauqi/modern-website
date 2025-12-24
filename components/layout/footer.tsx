@@ -44,23 +44,23 @@ export function Footer() {
     <footer className="bg-gradient-to-b from-blue-900 to-blue-950 text-white">
       {/* Newsletter Section */}
       <div className="border-b border-white/10">
-        <div className="container-custom py-10 md:py-12">
+        <div className="container-custom py-12">
           <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
-            <div className="max-w-md">
-              <h3 className="text-xl md:text-2xl font-bold mb-2">
+            <div>
+              <h3 className="text-2xl font-bold mb-2">
                 Dapatkan Tips Digital Marketing
               </h3>
-              <p className="text-blue-300 text-sm md:text-base">
+              <p className="text-blue-300">
                 Subscribe newsletter kami untuk insight dan tips terbaru.
               </p>
             </div>
-            <form className="flex gap-2 w-full lg:w-auto lg:min-w-[400px]">
+            <form className="flex gap-3 w-full lg:w-auto">
               <Input
                 type="email"
                 placeholder="Email Anda"
-                className="flex-1 bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:border-accent h-12"
+                className="w-full lg:w-80 bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:border-accent h-12"
               />
-              <Button variant="secondary" className="h-12 px-6">
+              <Button variant="secondary" className="h-12 px-6 shrink-0">
                 <ArrowRight className="w-5 h-5" />
               </Button>
             </form>
@@ -68,21 +68,21 @@ export function Footer() {
         </div>
       </div>
 
-      {/* Main Footer */}
-      <div className="container-custom py-12 md:py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
-          {/* Left Side - Brand */}
+      {/* Main Footer - 4 Column Layout */}
+      <div className="container-custom py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
+          {/* Brand Column */}
           <div>
-            <Link href="/" className="inline-flex items-center gap-2 mb-5">
+            <Link href="/" className="inline-flex items-center gap-2.5 mb-6">
               <div className="relative">
-                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-blue-500 flex items-center justify-center">
+                <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-primary to-blue-500 flex items-center justify-center">
                   <span className="text-white font-bold text-xl">C</span>
                 </div>
-                <div className="absolute -top-0.5 -right-0.5 w-3 h-3 bg-accent rounded-full" />
+                <div className="absolute -top-1 -right-1 w-3.5 h-3.5 bg-accent rounded-full" />
               </div>
               <span className="font-bold text-xl">Creativism</span>
             </Link>
-            <p className="text-blue-300 text-sm leading-relaxed mb-6 max-w-sm">
+            <p className="text-blue-300 text-sm leading-relaxed mb-6">
               {SITE_CONFIG.description}
             </p>
 
@@ -109,7 +109,7 @@ export function Footer() {
             </div>
 
             {/* Social Links */}
-            <div className="flex gap-3">
+            <div className="flex gap-2.5">
               {socialLinks.map((social) => (
                 <a
                   key={social.label}
@@ -125,70 +125,67 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Right Side - Links */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 lg:gap-12">
-            {/* Perusahaan */}
-            <div>
-              <h4 className="font-semibold text-base mb-5">Perusahaan</h4>
-              <ul className="space-y-3">
-                {footerLinks.company.map((link) => (
-                  <li key={link.label}>
-                    <Link
-                      href={link.href}
-                      className="text-blue-300 hover:text-white transition-colors text-sm"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          {/* Perusahaan Column */}
+          <div>
+            <h4 className="font-semibold text-lg mb-6">Perusahaan</h4>
+            <ul className="space-y-4">
+              {footerLinks.company.map((link) => (
+                <li key={link.label}>
+                  <Link
+                    href={link.href}
+                    className="text-blue-300 hover:text-white transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-            {/* Layanan */}
-            <div>
-              <h4 className="font-semibold text-base mb-5">Layanan</h4>
-              <ul className="space-y-3">
-                {footerLinks.services.map((link) => (
-                  <li key={link.label}>
-                    <Link
-                      href={link.href}
-                      className="text-blue-300 hover:text-white transition-colors text-sm"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          {/* Layanan Column */}
+          <div>
+            <h4 className="font-semibold text-lg mb-6">Layanan</h4>
+            <ul className="space-y-4">
+              {footerLinks.services.map((link) => (
+                <li key={link.label}>
+                  <Link
+                    href={link.href}
+                    className="text-blue-300 hover:text-white transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-            {/* Support */}
-            <div>
-              <h4 className="font-semibold text-base mb-5">Support</h4>
-              <ul className="space-y-3">
-                {footerLinks.support.map((link) => (
-                  <li key={link.label}>
-                    <Link
-                      href={link.href}
-                      className="text-blue-300 hover:text-white transition-colors text-sm"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          {/* Support Column */}
+          <div>
+            <h4 className="font-semibold text-lg mb-6">Support</h4>
+            <ul className="space-y-4">
+              {footerLinks.support.map((link) => (
+                <li key={link.label}>
+                  <Link
+                    href={link.href}
+                    className="text-blue-300 hover:text-white transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>
 
       {/* Bottom Bar */}
       <div className="border-t border-white/10">
-        <div className="container-custom py-5">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
+        <div className="container-custom py-6">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-blue-400 text-sm">
               &copy; {new Date().getFullYear()} Creativism. All rights reserved.
             </p>
-            <div className="flex gap-6 text-sm text-blue-400">
+            <div className="flex gap-8 text-sm text-blue-400">
               <Link href="/privacy" className="hover:text-white transition-colors">
                 Privacy Policy
               </Link>
