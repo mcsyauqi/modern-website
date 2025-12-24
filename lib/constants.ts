@@ -176,7 +176,7 @@ export const TESTIMONIALS = [
     name: "Budi Santoso",
     role: "CEO",
     company: "PT Maju Bersama",
-    image: "/testimonials/budi.jpg",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
     content:
       "Creativism membantu kami meningkatkan penjualan online hingga 300% dalam 6 bulan. Tim yang sangat profesional dan responsif.",
     rating: 5,
@@ -186,7 +186,7 @@ export const TESTIMONIALS = [
     name: "Siti Rahayu",
     role: "Marketing Director",
     company: "Kopi Nusantara",
-    image: "/testimonials/siti.jpg",
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&crop=face",
     content:
       "Social media management dari Creativism luar biasa. Engagement kami naik signifikan dan brand awareness semakin kuat.",
     rating: 5,
@@ -196,7 +196,7 @@ export const TESTIMONIALS = [
     name: "Ahmad Wijaya",
     role: "Founder",
     company: "Tech Startup ID",
-    image: "/testimonials/ahmad.jpg",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
     content:
       "Website yang dibuat sangat profesional dan SEO-nya bagus. Ranking kami di Google naik ke halaman 1 dalam 3 bulan.",
     rating: 5,
@@ -206,7 +206,7 @@ export const TESTIMONIALS = [
     name: "Maya Putri",
     role: "Brand Manager",
     company: "Fashion House",
-    image: "/testimonials/maya.jpg",
+    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
     content:
       "Iklan Meta Ads yang dikelola Creativism memberikan ROAS yang sangat baik. Recommended untuk bisnis fashion!",
     rating: 5,
@@ -323,7 +323,7 @@ export const PORTFOLIO_ITEMS = [
     title: "E-commerce Transformation",
     client: "PT Maju Bersama",
     category: "Website Development",
-    image: "/portfolio/maju-bersama.jpg",
+    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop",
     description: "Transformasi digital untuk meningkatkan penjualan online.",
     results: [
       { metric: "Peningkatan Sales", value: "+300%" },
@@ -337,7 +337,7 @@ export const PORTFOLIO_ITEMS = [
     title: "Social Media Growth",
     client: "Kopi Nusantara",
     category: "Social Media",
-    image: "/portfolio/kopi-nusantara.jpg",
+    image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&h=600&fit=crop",
     description: "Strategi social media untuk brand kopi lokal.",
     results: [
       { metric: "Followers Growth", value: "+150K" },
@@ -351,7 +351,7 @@ export const PORTFOLIO_ITEMS = [
     title: "SEO Domination",
     client: "Tech Startup ID",
     category: "SEO",
-    image: "/portfolio/tech-startup.jpg",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
     description: "Strategi SEO komprehensif untuk startup teknologi.",
     results: [
       { metric: "Ranking Keywords", value: "50+ Page 1" },
@@ -365,7 +365,7 @@ export const PORTFOLIO_ITEMS = [
     title: "Meta Ads Campaign",
     client: "Fashion House",
     category: "Meta Ads",
-    image: "/portfolio/fashion-house.jpg",
+    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=600&fit=crop",
     description: "Kampanye iklan Meta untuk brand fashion.",
     results: [
       { metric: "ROAS", value: "5.2x" },
@@ -379,25 +379,25 @@ export const TEAM_MEMBERS = [
   {
     name: "Andi Prasetyo",
     role: "Founder & CEO",
-    image: "/team/andi.jpg",
+    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&h=300&fit=crop&crop=face",
     bio: "10+ tahun pengalaman di industri digital marketing.",
   },
   {
     name: "Lisa Permata",
     role: "Creative Director",
-    image: "/team/lisa.jpg",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&h=300&fit=crop&crop=face",
     bio: "Expert dalam branding dan visual storytelling.",
   },
   {
     name: "Reza Firmansyah",
     role: "Head of Digital",
-    image: "/team/reza.jpg",
+    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=300&h=300&fit=crop&crop=face",
     bio: "Spesialis Google Ads dan Meta Ads certified.",
   },
   {
     name: "Dinda Ayu",
     role: "Content Lead",
-    image: "/team/dinda.jpg",
+    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&h=300&fit=crop&crop=face",
     bio: "Passionate dalam creating engaging content.",
   },
 ];
@@ -426,5 +426,68 @@ export const AI_FEATURES = [
     description:
       "AI sebagai tools yang powerful, manusia sebagai decision maker yang strategis.",
     icon: "Users",
+  },
+];
+
+export const BLOG_POSTS = [
+  {
+    title: "10 Strategi SEO yang Masih Efektif di 2024",
+    slug: "strategi-seo-2024",
+    excerpt:
+      "Pelajari strategi SEO terbaru yang akan membantu website Anda mendominasi halaman pertama Google.",
+    image: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=600&h=400&fit=crop",
+    category: "SEO",
+    date: "20 Des 2024",
+    readTime: "8 min",
+  },
+  {
+    title: "Cara Membuat Content Calendar yang Efektif",
+    slug: "content-calendar-efektif",
+    excerpt:
+      "Panduan lengkap membuat content calendar untuk social media yang terorganisir dan konsisten.",
+    image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
+    category: "Social Media",
+    date: "18 Des 2024",
+    readTime: "6 min",
+  },
+  {
+    title: "AI dalam Digital Marketing: Tren 2024",
+    slug: "ai-digital-marketing-2024",
+    excerpt:
+      "Bagaimana AI mengubah landscape digital marketing dan cara memanfaatkannya untuk bisnis Anda.",
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop",
+    category: "Digital Marketing",
+    date: "15 Des 2024",
+    readTime: "10 min",
+  },
+  {
+    title: "Panduan Lengkap Google Ads untuk Pemula",
+    slug: "panduan-google-ads-pemula",
+    excerpt:
+      "Mulai dari setup hingga optimasi, pelajari cara menjalankan Google Ads yang menghasilkan ROI.",
+    image: "https://images.unsplash.com/photo-1553835973-dec43bfddbeb?w=600&h=400&fit=crop",
+    category: "Google Ads",
+    date: "12 Des 2024",
+    readTime: "12 min",
+  },
+  {
+    title: "Meningkatkan Engagement Instagram dengan Reels",
+    slug: "instagram-reels-engagement",
+    excerpt:
+      "Tips dan trik membuat Instagram Reels yang viral dan meningkatkan engagement akun bisnis.",
+    image: "https://images.unsplash.com/photo-1611262588024-d12430b98920?w=600&h=400&fit=crop",
+    category: "Social Media",
+    date: "10 Des 2024",
+    readTime: "7 min",
+  },
+  {
+    title: "Cara Mengukur ROI Digital Marketing",
+    slug: "mengukur-roi-digital-marketing",
+    excerpt:
+      "Metrik dan tools yang perlu Anda ketahui untuk mengukur efektivitas kampanye digital marketing.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
+    category: "Digital Marketing",
+    date: "8 Des 2024",
+    readTime: "9 min",
   },
 ];
