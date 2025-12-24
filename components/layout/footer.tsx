@@ -70,110 +70,113 @@ export function Footer() {
 
       {/* Main Footer */}
       <div className="container-custom py-12 md:py-16">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-12 gap-8 lg:gap-6">
-          {/* Brand - Takes more space */}
-          <div className="col-span-2 md:col-span-3 lg:col-span-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+          {/* Left Side - Brand */}
+          <div>
             <Link href="/" className="inline-flex items-center gap-2 mb-5">
               <div className="relative">
-                <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-primary to-blue-500 flex items-center justify-center">
-                  <span className="text-white font-bold text-lg">C</span>
+                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-blue-500 flex items-center justify-center">
+                  <span className="text-white font-bold text-xl">C</span>
                 </div>
-                <div className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 bg-accent rounded-full" />
+                <div className="absolute -top-0.5 -right-0.5 w-3 h-3 bg-accent rounded-full" />
               </div>
-              <span className="font-bold text-lg">Creativism</span>
+              <span className="font-bold text-xl">Creativism</span>
             </Link>
-            <p className="text-blue-300 text-sm leading-relaxed mb-5 max-w-xs">
+            <p className="text-blue-300 text-sm leading-relaxed mb-6 max-w-sm">
               {SITE_CONFIG.description}
             </p>
 
             {/* Contact Info */}
-            <div className="space-y-2.5 mb-5">
+            <div className="space-y-3 mb-6">
               <a
                 href={`mailto:${SITE_CONFIG.email}`}
-                className="flex items-center gap-2.5 text-blue-300 hover:text-white transition-colors text-sm"
+                className="flex items-center gap-3 text-blue-300 hover:text-white transition-colors text-sm"
               >
                 <Mail className="w-4 h-4 shrink-0" />
                 {SITE_CONFIG.email}
               </a>
               <a
                 href={`tel:${SITE_CONFIG.phone}`}
-                className="flex items-center gap-2.5 text-blue-300 hover:text-white transition-colors text-sm"
+                className="flex items-center gap-3 text-blue-300 hover:text-white transition-colors text-sm"
               >
                 <Phone className="w-4 h-4 shrink-0" />
                 {SITE_CONFIG.phone}
               </a>
-              <div className="flex items-start gap-2.5 text-blue-300 text-sm">
+              <div className="flex items-start gap-3 text-blue-300 text-sm">
                 <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
                 <span>{SITE_CONFIG.address}</span>
               </div>
             </div>
 
             {/* Social Links */}
-            <div className="flex gap-2">
+            <div className="flex gap-3">
               {socialLinks.map((social) => (
                 <a
                   key={social.label}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-accent hover:text-blue-900 transition-all duration-200"
+                  className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-accent hover:text-blue-900 transition-all duration-200"
                   aria-label={social.label}
                 >
-                  <social.icon className="w-4 h-4" />
+                  <social.icon className="w-5 h-5" />
                 </a>
               ))}
             </div>
           </div>
 
-          {/* Perusahaan */}
-          <div className="col-span-1 lg:col-span-2">
-            <h4 className="font-semibold text-base mb-4">Perusahaan</h4>
-            <ul className="space-y-2.5">
-              {footerLinks.company.map((link) => (
-                <li key={link.label}>
-                  <Link
-                    href={link.href}
-                    className="text-blue-300 hover:text-white transition-colors text-sm"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {/* Right Side - Links */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 lg:gap-12">
+            {/* Perusahaan */}
+            <div>
+              <h4 className="font-semibold text-base mb-5">Perusahaan</h4>
+              <ul className="space-y-3">
+                {footerLinks.company.map((link) => (
+                  <li key={link.label}>
+                    <Link
+                      href={link.href}
+                      className="text-blue-300 hover:text-white transition-colors text-sm"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-          {/* Layanan */}
-          <div className="col-span-1 lg:col-span-3">
-            <h4 className="font-semibold text-base mb-4">Layanan</h4>
-            <ul className="space-y-2.5">
-              {footerLinks.services.map((link) => (
-                <li key={link.label}>
-                  <Link
-                    href={link.href}
-                    className="text-blue-300 hover:text-white transition-colors text-sm"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+            {/* Layanan */}
+            <div>
+              <h4 className="font-semibold text-base mb-5">Layanan</h4>
+              <ul className="space-y-3">
+                {footerLinks.services.map((link) => (
+                  <li key={link.label}>
+                    <Link
+                      href={link.href}
+                      className="text-blue-300 hover:text-white transition-colors text-sm"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-          {/* Support */}
-          <div className="col-span-1 lg:col-span-2">
-            <h4 className="font-semibold text-base mb-4">Support</h4>
-            <ul className="space-y-2.5">
-              {footerLinks.support.map((link) => (
-                <li key={link.label}>
-                  <Link
-                    href={link.href}
-                    className="text-blue-300 hover:text-white transition-colors text-sm"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            {/* Support */}
+            <div>
+              <h4 className="font-semibold text-base mb-5">Support</h4>
+              <ul className="space-y-3">
+                {footerLinks.support.map((link) => (
+                  <li key={link.label}>
+                    <Link
+                      href={link.href}
+                      className="text-blue-300 hover:text-white transition-colors text-sm"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>
