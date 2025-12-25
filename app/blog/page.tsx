@@ -1,71 +1,15 @@
 import { Metadata } from "next";
-import { Section, SectionHeader } from "@/components/layout/section";
+import { Section } from "@/components/layout/section";
 import { BlogCard } from "@/components/features/blog-card";
 import { FadeIn } from "@/components/animations/fade-in";
 import { Sparkles } from "lucide-react";
+import { BLOG_POSTS } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Blog",
   description:
     "Tips, insight, dan panduan digital marketing dari tim Creativism. Pelajari strategi terbaru untuk mengembangkan bisnis Anda.",
 };
-
-const blogPosts = [
-  {
-    title: "10 Strategi SEO yang Masih Efektif di 2024",
-    slug: "strategi-seo-2024",
-    excerpt:
-      "Pelajari strategi SEO terbaru yang akan membantu website Anda mendominasi halaman pertama Google.",
-    category: "SEO",
-    date: "20 Des 2024",
-    readTime: "8 min",
-  },
-  {
-    title: "Cara Membuat Content Calendar yang Efektif",
-    slug: "content-calendar-efektif",
-    excerpt:
-      "Panduan lengkap membuat content calendar untuk social media yang terorganisir dan konsisten.",
-    category: "Social Media",
-    date: "18 Des 2024",
-    readTime: "6 min",
-  },
-  {
-    title: "AI dalam Digital Marketing: Tren 2024",
-    slug: "ai-digital-marketing-2024",
-    excerpt:
-      "Bagaimana AI mengubah landscape digital marketing dan cara memanfaatkannya untuk bisnis Anda.",
-    category: "Digital Marketing",
-    date: "15 Des 2024",
-    readTime: "10 min",
-  },
-  {
-    title: "Panduan Lengkap Google Ads untuk Pemula",
-    slug: "panduan-google-ads-pemula",
-    excerpt:
-      "Mulai dari setup hingga optimasi, pelajari cara menjalankan Google Ads yang menghasilkan ROI.",
-    category: "Google Ads",
-    date: "12 Des 2024",
-    readTime: "12 min",
-  },
-  {
-    title: "Meningkatkan Engagement Instagram dengan Reels",
-    slug: "instagram-reels-engagement",
-    excerpt:
-      "Tips dan trik membuat Instagram Reels yang viral dan meningkatkan engagement akun bisnis.",
-    category: "Social Media",
-    date: "10 Des 2024",
-    readTime: "7 min",
-  },
-  {
-    title: "Cara Mengukur ROI Digital Marketing",
-    slug: "mengukur-roi-digital-marketing",
-    excerpt:
-      "Metrik dan tools yang perlu Anda ketahui untuk mengukur efektivitas kampanye digital marketing.",
-    category: "Digital Marketing",
-    date: "8 Des 2024",
-    readTime: "9 min",
-  },
-];
 
 const categories = [
   "Semua",
@@ -122,7 +66,7 @@ export default function BlogPage() {
       {/* Blog Grid */}
       <Section background="gray">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {blogPosts.map((post, index) => (
+          {BLOG_POSTS.map((post, index) => (
             <BlogCard key={post.slug} {...post} index={index} />
           ))}
         </div>
