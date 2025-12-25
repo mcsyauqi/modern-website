@@ -256,20 +256,29 @@ body {
   box-shadow: 0 20px 40px rgba(41, 130, 186, 0.15);
 }
 
-/* Section padding */
+/* Section padding - Consistent vertical rhythm */
 .section-padding {
-  padding: 5rem 1rem;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 @media (min-width: 768px) {
   .section-padding {
-    padding: 6rem 2rem;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 32px;
+    padding-right: 32px;
   }
 }
 
 @media (min-width: 1024px) {
   .section-padding {
-    padding: 8rem 2rem;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    padding-left: 48px;
+    padding-right: 48px;
   }
 }
 
@@ -277,18 +286,22 @@ body {
 .container-custom {
   width: 100%;
   max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 768px) {
   .container-custom {
-    padding: 0 1.5rem;
+    padding-left: 32px;
+    padding-right: 32px;
   }
 }
 
 @media (min-width: 1024px) {
   .container-custom {
-    padding: 0 2rem;
+    padding-left: 48px;
+    padding-right: 48px;
   }
 }

@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Play, Star, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CountUp } from "@/components/animations/count-up";
-import { STATS, SITE_CONFIG } from "@/lib/constants";
+import { STATS } from "@/lib/constants";
 
 export function Hero() {
   return (
@@ -72,8 +72,8 @@ export function Hero() {
         </motion.div>
       </div>
 
-      <div className="container-custom relative z-10 pt-32 pb-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="w-full max-w-7xl mx-auto px-6 md:px-8 lg:px-12 relative z-10 pt-32 pb-24">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Content */}
           <div className="text-white">
             {/* Badge */}
@@ -81,7 +81,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6"
+              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-5 py-2.5 mb-8"
             >
               <Sparkles className="w-4 h-4 text-accent" />
               <span className="text-sm font-medium">AI-Powered Digital Marketing</span>
@@ -92,7 +92,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8"
             >
               Digital Marketing untuk Bisnis yang Siap{" "}
               <span className="text-gradient">Berkembang</span>
@@ -103,7 +103,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-lg text-blue-100 mb-8 max-w-xl"
+              className="text-lg md:text-xl text-blue-100 mb-10 max-w-xl leading-relaxed"
             >
               Creativism menggabungkan kecerdasan AI dengan expertise manusia untuk
               menghasilkan strategi digital marketing yang terukur dan efektif.
@@ -114,7 +114,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="flex flex-wrap gap-4 mb-12"
+              className="flex flex-wrap gap-4 mb-16"
             >
               <Button asChild size="lg" variant="secondary">
                 <Link href="/kontak">
@@ -135,11 +135,11 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="grid grid-cols-2 md:grid-cols-4 gap-6"
+              className="grid grid-cols-2 md:grid-cols-4 gap-8"
             >
               {STATS.map((stat, index) => (
                 <div key={index} className="text-center md:text-left">
-                  <div className="text-3xl md:text-4xl font-bold text-white">
+                  <div className="text-3xl md:text-4xl font-bold text-white mb-1">
                     <CountUp end={stat.value} suffix={stat.suffix} decimals={stat.value % 1 !== 0 ? 1 : 0} />
                   </div>
                   <div className="text-sm text-blue-200">{stat.label}</div>
@@ -207,7 +207,7 @@ export function Hero() {
 
       {/* Scroll indicator */}
       <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        className="absolute bottom-10 left-1/2 -translate-x-1/2"
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
       >

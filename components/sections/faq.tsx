@@ -40,12 +40,12 @@ export function FAQ({
             <AccordionItem
               key={index}
               value={`item-${index}`}
-              className="bg-white rounded-xl px-6 border-0 shadow-sm"
+              className="bg-white rounded-xl px-6 py-2 border-0 shadow-sm"
             >
-              <AccordionTrigger className="text-left text-lg">
+              <AccordionTrigger className="text-left text-lg font-medium py-5">
                 {item.question}
               </AccordionTrigger>
-              <AccordionContent className="text-gray-600 leading-relaxed">
+              <AccordionContent className="text-gray-600 leading-relaxed pb-5">
                 {item.answer}
               </AccordionContent>
             </AccordionItem>

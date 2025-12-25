@@ -17,13 +17,13 @@ export function ServicesGrid() {
         description="Dari strategi hingga eksekusi, kami menyediakan layanan digital marketing end-to-end yang didukung oleh teknologi AI untuk hasil optimal."
       />
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
         {SERVICES.map((service, index) => (
           <ServiceCard key={service.id} {...service} index={index} />
         ))}
       </div>
 
-      <div className="mt-12 text-center">
+      <div className="mt-16 text-center">
         <Button asChild size="lg">
           <Link href="/layanan">
             Lihat Semua Layanan

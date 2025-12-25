@@ -35,16 +35,16 @@ export function CTA() {
         transition={{ duration: 0.6 }}
         className="relative text-center max-w-4xl mx-auto"
       >
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8">
           Siap Membawa Bisnis Anda ke Level Berikutnya?
         </h2>
-        <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
+        <p className="text-lg md:text-xl text-blue-100 mb-12 max-w-2xl mx-auto leading-relaxed">
           Konsultasi gratis dengan tim expert kami. Kami siap membantu Anda
           merancang strategi digital marketing yang tepat untuk bisnis Anda.
         </p>
 
         {/* CTA Buttons */}
-        <div className="flex flex-wrap justify-center gap-4 mb-10">
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
           <Button asChild size="xl" variant="secondary">
             <Link href="/kontak">
               Jadwalkan Konsultasi
@@ -69,7 +69,7 @@ export function CTA() {
         </div>
 
         {/* Trust items */}
-        <div className="flex flex-wrap justify-center gap-6">
+        <div className="flex flex-wrap justify-center gap-8">
           {trustItems.map((item, index) => (
             <motion.div
               key={index}
@@ -77,12 +77,12 @@ export function CTA() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="flex items-center gap-2 text-blue-100"
+              className="flex items-center gap-3 text-blue-100"
             >
-              <div className="w-5 h-5 rounded-full bg-accent flex items-center justify-center">
-                <Check className="w-3 h-3 text-dark" />
+              <div className="w-6 h-6 rounded-full bg-accent flex items-center justify-center">
+                <Check className="w-4 h-4 text-dark" />
               </div>
-              {item}
+              <span className="text-base">{item}</span>
             </motion.div>
           ))}
         </div>
