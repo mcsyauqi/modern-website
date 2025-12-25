@@ -30,7 +30,7 @@ const blogPosts: Record<
     date: string;
     readTime: string;
     image: string;
-    author: { name: string; role: string };
+    author: { name: string; role: string; image: string };
     content: string;
   }
 > = {
@@ -42,7 +42,7 @@ const blogPosts: Record<
     date: "20 Des 2024",
     readTime: "8 min",
     image: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=1200&h=600&fit=crop",
-    author: { name: "Reza Firmansyah", role: "Head of Digital" },
+    author: { name: "Reza Firmansyah", role: "Head of Digital", image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&h=150&fit=crop&crop=face" },
     content: `
       <p>SEO terus berkembang seiring dengan pembaruan algoritma Google. Di tahun 2024, ada beberapa strategi yang masih sangat efektif untuk meningkatkan ranking website Anda.</p>
 
@@ -88,7 +88,7 @@ const blogPosts: Record<
     date: "18 Des 2024",
     readTime: "6 min",
     image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=1200&h=600&fit=crop",
-    author: { name: "Dinda Ayu", role: "Content Lead" },
+    author: { name: "Dinda Ayu", role: "Content Lead", image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=face" },
     content: `
       <p>Content calendar adalah tools essential untuk setiap social media manager. Dengan planning yang baik, Anda bisa menjaga konsistensi dan kualitas konten.</p>
 
@@ -130,7 +130,7 @@ const blogPosts: Record<
     date: "15 Des 2024",
     readTime: "10 min",
     image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=600&fit=crop",
-    author: { name: "Andi Prasetyo", role: "Founder & CEO" },
+    author: { name: "Andi Prasetyo", role: "Founder & CEO", image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face" },
     content: `
       <p>Artificial Intelligence (AI) telah mengubah cara kita melakukan digital marketing secara fundamental. Di tahun 2024, AI bukan lagi pilihan—tapi keharusan untuk tetap kompetitif.</p>
 
@@ -175,7 +175,7 @@ const blogPosts: Record<
     date: "12 Des 2024",
     readTime: "12 min",
     image: "https://images.unsplash.com/photo-1553835973-dec43bfddbeb?w=1200&h=600&fit=crop",
-    author: { name: "Reza Firmansyah", role: "Head of Digital" },
+    author: { name: "Reza Firmansyah", role: "Head of Digital", image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&h=150&fit=crop&crop=face" },
     content: `
       <p>Google Ads adalah salah satu platform advertising paling powerful untuk menjangkau potential customers. Panduan ini akan membantu Anda memulai dari nol.</p>
 
@@ -242,7 +242,7 @@ const blogPosts: Record<
     date: "10 Des 2024",
     readTime: "7 min",
     image: "https://images.unsplash.com/photo-1611262588024-d12430b98920?w=1200&h=600&fit=crop",
-    author: { name: "Lisa Permata", role: "Creative Director" },
+    author: { name: "Lisa Permata", role: "Creative Director", image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&h=150&fit=crop&crop=face" },
     content: `
       <p>Instagram Reels telah menjadi salah satu fitur terpenting untuk meningkatkan reach dan engagement. Dengan algoritma yang mendukung short-form video, Reels adalah kesempatan emas untuk bisnis.</p>
 
@@ -307,7 +307,7 @@ const blogPosts: Record<
     date: "8 Des 2024",
     readTime: "9 min",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=600&fit=crop",
-    author: { name: "Andi Prasetyo", role: "Founder & CEO" },
+    author: { name: "Andi Prasetyo", role: "Founder & CEO", image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face" },
     content: `
       <p>Mengukur ROI (Return on Investment) adalah crucial untuk memastikan budget marketing Anda digunakan secara efektif. Tanpa measurement yang tepat, Anda hanya menebak-nebak.</p>
 
@@ -516,7 +516,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                   <div className="bg-gray-50 rounded-xl p-6">
                     <h3 className="font-semibold text-dark mb-4">Author</h3>
                     <div className="flex items-center gap-3">
-                      <Avatar fallback={post.author.name} size="lg" />
+                      <Avatar src={post.author.image} alt={post.author.name} fallback={post.author.name} size="lg" />
                       <div>
                         <div className="font-medium text-dark">
                           {post.author.name}

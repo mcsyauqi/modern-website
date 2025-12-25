@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 interface AvatarProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -21,8 +22,22 @@ const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
       xl: "h-24 w-24 text-xl",
     };
 
+    const imageSizes = {
+      sm: 32,
+      md: 48,
+      lg: 64,
+      xl: 96,
+    };
+
     const getFallbackInitials = () => {
-      if (fallback) return fallback;
+      if (fallback) {
+        return fallback
+          .split(" ")
+          .map((word) => word[0])
+          .join("")
+          .toUpperCase()
+          .slice(0, 2);
+      }
       if (alt) {
         return alt
           .split(" ")
@@ -45,9 +60,11 @@ const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
         {...props}
       >
         {src && !imageError ? (
-          <img
+          <Image
             src={src}
             alt={alt || "Avatar"}
+            width={imageSizes[size]}
+            height={imageSizes[size]}
             className="aspect-square h-full w-full object-cover"
             onError={() => setImageError(true)}
           />
